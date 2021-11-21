@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "d187ac36-e8ad-4b6a-bace-38396d6c19fa",
+		"name": "HW_Postman 1.5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "First response",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"This is the first responce from server!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/first",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"first"
+					],
+					"query": [
+						{
+							"key": "response body",
+							"value": "string",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql(\"Veronika\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test age\", function () {\r",
+							"    pm.expect(jsonData.age).to.eql(\"29\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test salary\", function () {\r",
+							"    pm.expect(jsonData.salary).to.eql(1000);\r",
+							"});\r",
+							"\r",
+							"var requestData = request.data;\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"pm.expect(jsonData.name).to.eql(requestData.name)});\r",
+							"\r",
+							"var requestData = request.data;\r",
+							"pm.test(\"Your test age\", function () {\r",
+							"pm.expect(jsonData.age).to.eql(requestData.age)});\r",
+							"\r",
+							"var requestData = request.data;\r",
+							"pm.test(\"Your test salary\", function () {\r",
+							"pm.expect(jsonData.salary).to.eq(parseInt(requestData.salary))});\r",
+							"\r",
+							"\r",
+							"var json_resp = JSON.parse(responseBody);\r",
+							"var family = json_resp.family\r",
+							"console.log(family);\r",
+							"\r",
+							"    var salary = json_resp.salary;\r",
+							"pm.test(\"Your salary for 1,5 year=4000\", function () {\r",
+							"    pm.expect(jsonData.family.u_salary_1_5_year).to.eql(salary*4);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Veronika",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "29",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://162.55.220.72:5005/user_info_3",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"var requestData = pm.request.url.query.toObject();\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"pm.expect(jsonData.name).to.eql(requestData.name)});\r",
+							"\r",
+							"pm.test(\"Your test age\", function () {\r",
+							"pm.expect(jsonData.age).to.eql(requestData.age)});\r",
+							"\r",
+							"pm.test(\"Your test salary\", function () {\r",
+							"pm.expect(jsonData.salary).to.eql(parseInt(requestData.salary))});\r",
+							"\r",
+							"var json_resp = JSON.parse(responseBody);\r",
+							"var family = json_resp.family\r",
+							"console.log(family);\r",
+							"\r",
+							"var dog = jsonData.family.pets.dog;\r",
+							"\r",
+							"pm.test(\"Your dog has a name\", function () {\r",
+							"pm.expect(dog).to.have.property(\"name\")});\r",
+							"\r",
+							"pm.test(\"Your dog has an age\", function () {\r",
+							"pm.expect(dog).to.have.property(\"age\")});\r",
+							"\r",
+							"pm.test(\"Name is equal to Luky\", function () {\r",
+							"pm.expect(dog.name).to.eql(\"Luky\")});\r",
+							"\r",
+							"pm.test(\"Age is equal 4\", function () {\r",
+							"pm.expect(dog.age).to.eql(4)});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_3?name=Veronika&age=29&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Veronika"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Object_info_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"var requestData = pm.request.url.query.toObject();\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"pm.expect(jsonData.name).to.eql(requestData.name)});\r",
+							"\r",
+							"pm.test(\"Your test age\", function () {\r",
+							"pm.expect(jsonData.age).to.eql(parseInt(requestData.age))});\r",
+							"\r",
+							"console.log(requestData.salary)\r",
+							"console.log(jsonData.salary)\r",
+							"console.log(jsonData.salary[0])\r",
+							"console.log(jsonData.salary[1])\r",
+							"console.log(jsonData.salary[2])\r",
+							"\r",
+							"pm.test(\"Salary 0 equal to salary from request\", function () {\r",
+							"pm.expect(jsonData.salary[0]).to.eql(parseInt(requestData.salary))});\r",
+							"\r",
+							"pm.test(\"Salary 1 = salary from request*2\", function () {\r",
+							"pm.expect(parseInt(jsonData.salary[1])).to.eql(requestData.salary*2)});\r",
+							"\r",
+							"pm.test(\"Salary 2 = salary from request*3\", function () {\r",
+							"pm.expect(parseInt(jsonData.salary[2])).to.eql(requestData.salary*3)});\r",
+							"\r",
+							"pm.environment.set(\"name\",requestData.name);\r",
+							"pm.environment.set(\"age\",requestData.age);\r",
+							"pm.environment.set(\"salary\",requestData.salary);\r",
+							"\r",
+							"var json_resp = JSON.parse(responseBody);\r",
+							"var salary = json_resp.salary;\r",
+							"for (var i=0;i<salary.length; i++)\r",
+							"{console.log(salary[i])};\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://162.55.220.72:5005/object_info_4?name=Veronika&age=29&salary=1000",
+					"protocol": "http",
+					"host": [
+						"162",
+						"55",
+						"220",
+						"72"
+					],
+					"port": "5005",
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Veronika"
+						},
+						{
+							"key": "age",
+							"value": "29"
+						},
+						{
+							"key": "salary",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
