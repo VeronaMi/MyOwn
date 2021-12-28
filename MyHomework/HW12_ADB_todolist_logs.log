@@ -1,0 +1,196 @@
+﻿--------- beginning of crash
+12-28 13:04:30.606   408   769 W AudioALSAStreamManager: -routingOutputDevice(), output_devices == current_output_devices(0x2), return
+12-28 13:04:30.607  1062  1062 I AudioPortEventHandler: [GJ_CB] handleMessage: msg.what = 2
+12-28 13:04:30.604 11251 11251 I RenderThread: type=1400 audit(0.0:22431): avc: denied { read } for name="boot_mode" dev="sysfs" ino=6062 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+12-28 13:04:30.604 11251 11251 I RenderThread: type=1400 audit(0.0:22432): avc: denied { open } for path="/sys/devices/virtual/BOOT/BOOT/boot/boot_mode" dev="sysfs" ino=6062 scontext=u:r:untrusted_app:s0:c512,c768 tcontext=u:object_r:sysfs:s0 tclass=file permissive=1
+12-28 13:04:30.692  1923  1923 I perfservd: 0: set freq: -1 -1 -1 -1 -1 -1
+12-28 13:04:30.692  1923  1923 I perfservd: 0: set: 2 -1 -1 -1 -1 -1
+12-28 13:04:30.706   408   769 I PerfService: PerfServiceNative_userEnableAsync:24
+12-28 13:04:30.708  1923  1923 I perfservd: 0: set freq: -1 -1 -1 -1 -1 -1
+12-28 13:04:30.708  1923  1923 I perfservd: 0: set: 2 -1 -1 -1 -1 -1
+12-28 13:04:30.791   408   769 E AudioFlinger: getNextBuffer, track(0xf3f2b600) get null buffer, mState 6, mFillingUpStatus 3
+12-28 13:04:30.953   408   676 I APM_AudioPolicyManager: stopOutput() output 13, stream 1, session 41
+12-28 13:04:30.953   408   676 I APM_AudioPolicyManager: getNewOutputDevice() selected device 0 bShareHwModule 1
+12-28 13:04:30.953   408   676 I APM_AudioPolicyManager: [DEBUG_VOL] checkDeviceMuteStrategies: outputDesc->isActive() = 0, isInCall() = 0, device: 2 ==> 2
+12-28 13:04:31.349  1062  1311 I PerfService: PerfServiceNative_boostEnableAsync:6
+12-28 13:04:31.351  1923  1923 I perfservd: 0: set freq: -1 -1 -1 -1 -1 -1
+12-28 13:04:31.351  1923  1923 I perfservd: 0: set: 2 -1 -1 -1 -1 -1
+12-28 13:04:31.427  1062  1311 I PerfService: PerfServiceNative_boostEnableTimeoutMsAsync:6, 100
+12-28 13:04:31.435   408  9153 W AudioFlinger: createEffect() error -2 from EffectGetDescriptor
+12-28 13:04:31.436   408  9153 E AudioEffect: set(): AudioFlinger could not create effect, status: -2
+12-28 13:04:31.436   408  1356 W AudioFlinger: createEffect() error -2 from EffectGetDescriptor
+12-28 13:04:31.436   408  1356 E AudioEffect: set(): AudioFlinger could not create effect, status: -2
+12-28 13:04:31.438   408 20235 I APM_AudioPolicyManager: startOutput() output 13, stream 1, session 41
+12-28 13:04:31.438   408 20235 I APM_AudioPolicyManager: getNewOutputDevice() selected device 2 bShareHwModule 1
+12-28 13:04:31.438   408 20235 I APM_AudioPolicyManager: setOutputDevice() changing device: 0x0002 ==> 0x0002, delayMs = 0
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: FATAL EXCEPTION: main
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: Process: com.android.todolist, PID: 11251
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: java.lang.ClassCastException: kotlin.collections.EmptyList cannot be cast to kotlin.collections.MutableList
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.android.todolist.MainActivity.ordenarAZ(MainActivity.kt:197)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.android.todolist.MainActivity.onNavigationItemSelected(MainActivity.kt:86)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.google.android.material.navigation.NavigationView$1.onMenuItemSelected(NavigationView.java:170)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at androidx.appcompat.view.menu.MenuBuilder.dispatchMenuItemSelected(MenuBuilder.java:840)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at androidx.appcompat.view.menu.SubMenuBuilder.dispatchMenuItemSelected(SubMenuBuilder.java:90)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at androidx.appcompat.view.menu.MenuItemImpl.invoke(MenuItemImpl.java:158)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at androidx.appcompat.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:991)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.google.android.material.internal.NavigationMenuPresenter$1.onClick(NavigationMenuPresenter.java:352)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.view.View.performClick(View.java:5727)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:22764)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:836)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:103)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:203)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6449)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1113)
+12-28 13:04:31.438 11251 11251 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:974)
+12-28 13:04:31.440  1062  1794 I ActivityManager: addErrorToDropBox com.android.todolist crash
+12-28 13:04:31.441   408   769 W AudioALSAStreamManager: -routingOutputDevice(), output_devices == current_output_devices(0x2), return
+12-28 13:04:31.443  1062  1062 I AudioPortEventHandler: [GJ_CB] handleMessage: msg.what = 2
+12-28 13:04:31.445  1062  1794 W ActivityManager:   Force finishing activity com.android.todolist/.MainActivity
+12-28 13:04:31.471  1062  1794 I BufferQueue: [unnamed-1062-1222](this:0x7dbf8dd000,id:1222,api:0,p:-1,c:-1) BufferQueue core=(1062:system_server)
+12-28 13:04:31.484  1062  1794 I BufferQueueProducer: [ScreenshotClient](this:0x7dbf8dd000,id:1222,api:1,p:-1,c:1062) disconnect(P): api 1
+12-28 13:04:31.496  1062  1794 I BufferQueueConsumer: [ScreenshotClient](this:0x7dbf8dd000,id:1222,api:1,p:-1,c:-1) disconnect(C)
+12-28 13:04:31.496  1062  1794 I BufferQueue: [ScreenshotClient](this:0x7dbf8dd000,id:1222,api:1,p:-1,c:-1) ~BufferQueueCore
+12-28 13:04:31.502  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:31.504  1062  1794 W ActivityManager:   Force finishing activity com.android.todolist/.MainActivity
+12-28 13:04:31.510  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:31.514  1062  1794 I libPerfService: perfSetUidInfo - uid:10015, fromUid:0
+12-28 13:04:31.516  1062  1794 E ActivityManager: Found activity ActivityRecord{28edfaa u0 com.android.todolist/.MainActivity t6241 f} in proc activity list using null instead of expected ProcessRecord{b6ede01 11251:com.android.todolist/u0a279}
+12-28 13:04:31.518  1062  1368 I libPerfService: [perfNotifyAppState] foreground:com.meizu.flyme.launcher, pid:2254
+12-28 13:04:31.520  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:31.520  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:31.525  1062  1794 I ActivityManager: Killing 11251:com.android.todolist/u0a279 (adj 100): crash
+12-28 13:04:31.527  1062  1091 I NetworkPolicy: onUidStateChanged uid=10015 2
+12-28 13:04:31.527  1062  1091 I NetworkPolicy: updateRuleForRestrictBackgroundLocked(10015): isForeground=true, isBlacklisted=false, isWhitelisted=false, oldRule=0 (NONE), newRule=0 (NONE), newUidRules=0 (NONE), oldUidRules=0 (NONE)
+12-28 13:04:31.527  1062  1091 I NetworkPolicy: rule3gBackgroundChanged 10015 false
+12-28 13:04:31.527  1062  1091 I NetworkPolicy: ruleWifiBackgroundChanged 10015 false
+12-28 13:04:31.527  1062  1091 I NetworkPolicy: updateRulesForNonMeteredNetworksLocked(10015), isIdle: false, mRestrictPower: false, mDeviceIdleMode: false, isForeground=true, isWhitelisted=false, oldRule=0 (NONE), newRule=0 (NONE), newUidRules=0 (NONE), oldUidRules=0 (NONE)
+12-28 13:04:31.528  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:31.528  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:31.537   408   769 E AudioFlinger: getNextBuffer, track(0xf3f2b600) get null buffer, mState 6, mFillingUpStatus 3
+12-28 13:04:31.553  1062 11455 W DropBoxManagerService: Dropping: data_app_crash-101c3778-0a01-456e-8d90-e17f0905f987 (10 > 0 bytes)
+12-28 13:04:31.554   374   374 I BufferQueue: [unnamed-374-7135](this:0x7303433800,id:7135,api:0,p:-1,c:-1) BufferQueue core=(374:/system/bin/surfaceflinger)
+12-28 13:04:31.554  1062  1310 W InputDispatcher: channel '8405914 com.android.todolist/com.android.todolist.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+12-28 13:04:31.554  1062  1310 E InputDispatcher: channel '8405914 com.android.todolist/com.android.todolist.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+12-28 13:04:31.554   374   374 I BufferQueueProducer: [](this:0x7303433800,id:7135,api:0,p:-1,c:374) setMaxDequeuedBufferCount: maxDequeuedBuffers = 3
+12-28 13:04:31.559   374   593 I BufferQueueProducer: [com.android.todolist/com.android.todolist.MainActivity](this:0x7305ff8000,id:7131,api:1,p:-1,c:374) disconnect(P): api 1
+12-28 13:04:31.560   374  1334 I SurfaceFlinger: EventThread Client Pid (11251) disconnected by (374)
+12-28 13:04:31.560   374  1334 I SurfaceFlinger: EventThread Client Pid (11251) disconnected by (374)
+12-28 13:04:31.560   374  1334 I SurfaceFlinger: EventThread Client Pid (11251) disconnected by (374)
+12-28 13:04:31.563  1062  2328 I WindowManager: WIN DEATH: Window{8405914 u0 com.android.todolist/com.android.todolist.MainActivity}
+12-28 13:04:31.563  1062  2328 W InputDispatcher: Attempted to unregister already unregistered input channel '8405914 com.android.todolist/com.android.todolist.MainActivity (server)'
+12-28 13:04:31.563  1062  2328 I WindowManager: Destroying surface Surface(name=com.android.todolist/com.android.todolist.MainActivity) called by com.android.server.wm.WindowStateAnimator.destroySurface:2178 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:962 com.android.server.wm.WindowState.removeLocked:1483 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:2748 com.android.server.wm.WindowManagerService.removeWindowLocked:2696 com.android.server.wm.WindowState$DeathRecipient.binderDied:1814 android.os.BinderProxy.sendDeathNotice:699 <bottom of call stack> 
+12-28 13:04:31.564  2254  2402 W libEGL  : [ANDROID_RECORDABLE] format: 1
+12-28 13:04:31.565  2107  2202 E CellLocation: create GsmCellLocation
+12-28 13:04:31.579   374   374 I BufferQueueConsumer: [com.android.todolist/com.android.todolist.MainActivity](this:0x7305ff8000,id:7131,api:1,p:-1,c:-1) disconnect(C)
+12-28 13:04:31.580   374   374 I BufferQueue: [com.android.todolist/com.android.todolist.MainActivity](this:0x7305ff8000,id:7131,api:1,p:-1,c:-1) ~BufferQueueCore
+12-28 13:04:31.587   374  1124 I SurfaceFlinger: [SF client] DEL(0x7306143380) for (1062:system_server)
+12-28 13:04:31.590  2254  2254 I Launcher: launcher guest mode set draglayout visiable
+12-28 13:04:31.594 14533 14533 W ResourceType: For resource 0x7f050021, entry index(33) is beyond type entryCount(18)
+12-28 13:04:31.597 14533 14533 W ResourceType: For resource 0x7f05001d, entry index(29) is beyond type entryCount(18)
+12-28 13:04:31.598 14533 14533 W ResourceType: For resource 0x7f05001e, entry index(30) is beyond type entryCount(18)
+12-28 13:04:31.598 14533 14533 W ResourceType: For resource 0x7f05001f, entry index(31) is beyond type entryCount(18)
+12-28 13:04:31.598 14533 14533 W ResourceType: For resource 0x7f05001c, entry index(28) is beyond type entryCount(18)
+12-28 13:04:31.607   406   406 W Zygote  : Unable to set zygote scheduler boost
+12-28 13:04:31.607   406   406 I Zygote  : ForkAndSpecializeCommon: Begin to fork a new process
+12-28 13:04:31.613   406   406 I Zygote  : ForkAndSpecializeCommon: fork is finished, pid=11466 
+12-28 13:04:31.613 11466 11466 I Zygote  : ForkAndSpecializeCommon: fork is finished, pid=0 
+12-28 13:04:31.613   406   406 W Zygote  : Unable to set zygote scheduler boost
+12-28 13:04:31.613 11466 11466 W Zygote  : mz_is_rooted true
+12-28 13:04:31.614 11466 11466 I Zygote  : ForkAndSpecializeCommon: Beginning of SetGids
+12-28 13:04:31.614 11466 11466 I Zygote  : ForkAndSpecializeCommon: End of SetGids
+12-28 13:04:31.615  1062  1076 W Process : zygoteSendArgsAndGetResult: start read result...
+12-28 13:04:31.618  1062  1076 W Process : 3ms so far, end read result
+12-28 13:04:31.618  1062  1076 I ActivityManager: Start proc 11466:com.google.android.gms/u0a81 for service com.google.android.gms/.chimera.GmsIntentOperationService
+12-28 13:04:31.635   374   374 I BufferQueue: [unnamed-374-7136](this:0x7305ff8000,id:7136,api:0,p:-1,c:-1) BufferQueue core=(374:/system/bin/surfaceflinger)
+12-28 13:04:31.635   374   374 I BufferQueueProducer: [](this:0x7305ff8000,id:7136,api:0,p:-1,c:374) setMaxDequeuedBufferCount: maxDequeuedBuffers = 3
+12-28 13:04:31.637  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:31.637  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:31.643  1062  1072 I art     : Background partial concurrent mark sweep GC freed 152963(7MB) AllocSpace objects, 23(2MB) LOS objects, 8% free, 45MB/49MB, paused 1.845ms total 154.715ms
+12-28 13:04:31.698   408   676 I APM_AudioPolicyManager: stopOutput() output 13, stream 1, session 41
+12-28 13:04:31.698   408   676 I APM_AudioPolicyManager: getNewOutputDevice() selected device 0 bShareHwModule 1
+12-28 13:04:31.698   408   676 I APM_AudioPolicyManager: [DEBUG_VOL] checkDeviceMuteStrategies: outputDesc->isActive() = 0, isInCall() = 0, device: 2 ==> 2
+12-28 13:04:31.706 11466 11466 W ResourceType: ResTable_typeSpec entry count inconsistent: given 74, previously 76
+12-28 13:04:31.711 11466 11466 I art     : Starting a blocking GC HeapTrim
+12-28 13:04:31.772  7376  7376 I Timer-0 : type=1400 audit(0.0:22433): avc: denied { getattr } for path="/proc/iomem" dev="proc" ino=4026532222 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:proc_iomem:s0 tclass=file permissive=1
+12-28 13:04:31.780  7376  7376 I Timer-0 : type=1400 audit(0.0:22434): avc: denied { getattr } for path="/proc/sysrq-trigger" dev="proc" ino=4026532245 scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:proc_sysrq:s0 tclass=file permissive=1
+12-28 13:04:31.823 11466 11466 W ResourceType: ResTable_typeSpec entry count inconsistent: given 74, previously 76
+12-28 13:04:31.880 11466 11466 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+12-28 13:04:31.881 11466 11466 I DynamiteModule: Considering local module com.google.android.gms.providerinstaller.dynamite:1 and remote module com.google.android.gms.providerinstaller.dynamite:0
+12-28 13:04:31.881 11466 11466 I DynamiteModule: Selected local version of com.google.android.gms.providerinstaller.dynamite
+12-28 13:04:31.884   375   658 I MAL-Daemon:  (      mfi_task_bootstrap,  404) mfi_task_bootstrap(): an event EVENT_ATMNGR_URC(18) incoming from FD 33!!
+12-28 13:04:31.884   375   702 I MAL-RDS :  (         rds_ru_urc_hdlr, 2624) [RDS-I][RDS][rds_ru_urc_hdlr] get URC data: +ECSQ: 21,37,1,1,1,-38,-416,7,41,7
+12-28 13:04:31.884   375   702 I MAL-RDS :  (         rds_ru_urc_hdlr, 3117) [RDS-I][RDS][RU][rds_ru_urc_hdlr] Update 3GPP STATUS rsrp<-104> rsrq<21> rssnr<41> ecno<5> sig_regstat<7> regstat<8>  sim<0>
+12-28 13:04:31.884   375   702 I MAL-RDS :  (    ru_send_event_entity,  433) [RDS-I][RDS][RU][ru_send_event_entity] send event 9006 to 906 with ret(0)
+12-28 13:04:31.884   375   702 I MAL-RDS :  (  rds_ru_3gpp_status_ind, 2097) [RDS-I][RU][EVENT_RU_DM_3GPP_STATUS_IND] i4ltersrp:-104, i4ltersrq:21, i4lterssnr:41, i43gecno:5, u43gpp_status:0x8, sim_id:0
+12-28 13:04:31.884   375   702 E MAL-RDS :  (  rds_ru_3gpp_status_ind, 2139) [RDS-E][RU][EVENT_RU_DM_3GPP_STATUS_IND] Invalid u43gpp_status:0x8 sim:0
+12-28 13:04:31.884   375   702 I MAL-RDS :  (  ru_ims_ctrl_send_atcmd, 1689) [RDS-I][RU][ru_ims_ctrl_send_atcmd] (old:new) => wfc(0:0), volte(0:0), video(0:0), opid(0) | system property(0,0,0)
+12-28 13:04:31.884   375   702 I MAL-RDS :  (  rds_ru_ims_vops_update, 7472) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled, Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+12-28 13:04:31.884   375   702 I MAL-RDS :  (          rds_ru_rpl_gen, 7763) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<0>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-59>, i4wifisnr<9999>, i4ltersrp<-104>, i4ltersrq<21>, u4active_ran<65539>, i4lterssnr<41>, i43gecno<-4>, u4sig_reg_status<7>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0> , sim<0>
+12-28 13:04:31.884   375   702 I MAL-RDS :  (          rds_ru_rpl_gen, 7780) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(1,255) New:(254,254)/(1,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(1,255) New:(254,254)/(1,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(1,255) New:(254,254)/(1,255) , sim<0>
+12-28 13:04:31.946 11466 11466 I ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+12-28 13:04:31.963   397   397 I thermal_repeater: oh, queryMdThermalInfo (0)No such file or directory
+12-28 13:04:31.972   397   397 I thermal_repeater: [recvMdThermalInfo] ret=28, strLen=127,  3, 36, -127, 0, 32767, 5024
+12-28 13:04:31.987 11466 11466 I bqiw    : Primes not initialized, returning default (no-op) Primes instance which will ignore all calls. Please call Primes.initialize(...) before using any Primes API.
+12-28 13:04:31.987 11466 11490 I GMS_MM_Logger: Started.
+12-28 13:04:31.997 11466 11488 I Watchcat: Started
+12-28 13:04:32.051   374   593 I BufferQueueProducer: [thumbnail anim](this:0x7305ff8000,id:7136,api:2,p:-1,c:374) disconnect(P): api 2
+12-28 13:04:32.065  1062  2328 E ActivityManager: getContentProviderImpl: Update provider ProcessRecord{b5dd687 1062:system/1000} conProviers's adj. conProviders.provider.proc = ProcessRecord{8a1af31 2134:com.meizu.experiencedatasync/1000} stableCount = 1
+12-28 13:04:32.067   374   374 I BufferQueueConsumer: [thumbnail anim](this:0x7305ff8000,id:7136,api:2,p:-1,c:-1) disconnect(C)
+12-28 13:04:32.068   374   374 I BufferQueue: [thumbnail anim](this:0x7305ff8000,id:7136,api:2,p:-1,c:-1) ~BufferQueueCore
+12-28 13:04:32.068  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:32.069  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:32.303   375 31118 I MAL-RDS :  (rum_ws_listener_timeout_,  455) [RDS-I][RDS][RUM][rum_ws_listener_timeout_hndler] rum_check_ctx_ptr<0xea59b818, 0xea59b818>, Send Event: 9909
+12-28 13:04:32.303   375 31118 I MAL-RDS :  (   rum_send_event_entity,   83) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9909 to 914
+12-28 13:04:32.303   375   694 W MAL-Daemon:  (          event_get_data,  243) event_get_data(): chain_search NULL!!
+12-28 13:04:32.303   375   694 I MAL-RDS :  (rds_rum_rum_wsl_timer_ti, 1146) [RDS-I][RUM][rds_rum_rum_wsl_timer_timeout_req][RDS] rds_rum_rum_wsl_timer_timeout_req: prcontext->i4wifi_rssi = -59, prcontext->i4wifi_snr = 9999, prcontext->i4wifi_plr = 0
+12-28 13:04:32.305  1530  1530 I wpa_supplicant: Transparent command for driver nl80211, ret=-95
+12-28 13:04:32.305   375   694 I MAL-RDS :  (  rum_update_wifi_status, 1128) [RDS-I][RUM][rum_update_wifi_status][RDS] get rssi<-61> snr<9999> plr<0>
+12-28 13:04:32.305   375   694 I MAL-RDS :  (   rum_send_event_entity,   83) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 906
+12-28 13:04:32.305   375   702 I MAL-RDS :  (  rds_ru_wifi_status_ind, 2020) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffc3 i4wifisnr:0x270f sim_id:0
+12-28 13:04:32.305   375   694 I MAL-RDS :  (   rum_send_event_entity,   83) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9005 to 907
+12-28 13:04:32.305   375   708 I MAL-RDS :  (  rds_ru_wifi_status_ind, 2020) [RDS-I][RU][EVENT_RUM_RU_WIFI_STATUS_REQ] fgwifi_en:1(no use) i4wifirssi:0xffffffc3 i4wifisnr:0x270f sim_id:1
+12-28 13:04:32.305   375   702 I MAL-RDS :  (  rds_ru_ims_vops_update, 7472) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled, Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+12-28 13:04:32.305   375   708 I MAL-RDS :  (  rds_ru_ims_vops_update, 7472) [RDS-I][RU][rds_ru_ims_vops_update][RDS IMS]IMS VOPS IE is Disabled, Update to RPL<0>:(254,254), <1>:(254,254), <2>:(254,254)
+12-28 13:04:32.306   375   702 I MAL-RDS :  (          rds_ru_rpl_gen, 7763) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<0>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-61>, i4wifisnr<9999>, i4ltersrp<-104>, i4ltersrq<21>, u4active_ran<65539>, i4lterssnr<41>, i43gecno<-4>, u4sig_reg_status<7>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0> , sim<0>
+12-28 13:04:32.306   375   708 I MAL-RDS :  (          rds_ru_rpl_gen, 7763) [RDS-I][RU][rds_ru_rpl_gen][RDS] Current policy: fgimsolte_en<0>, fgwfc_en<0>, erdspolicy<3>,||Threshold i4wifirssih<-75>, i4wifirssil<-85>, i4wifirssih_ho<-78>, i4wifirssil_ho<-88>, i4wifisnrh<10>, i4wifisnrl<6>||Threshold i4ltersrph<-106>, i4ltersrpm<-111>, i4ltersrpl<-116>, i4ltersrqh<5>, i4ltersrqm<3>, i4ltersrql<1>||Threshold i43grscph<-85>, i43grscpl<-105>, i42grssih<-83>, i42grssil<-103>, i4lterssnrl<-3>, i43gecnol<-15>||current rds ru status: i4wifirssi<-61>, i4wifisnr<9999>, i4ltersrp<-141>, i4ltersrq<0>, u4active_ran<1>, i4lterssnr<-50>, i43gecno<-24>, u4sig_reg_status<0>||current wifi backhaul : rtp_plr<0>, rtp_jitter<0>, ping_ind<0>||pcscf acc stat : volte<1>, wfc<1> || wifi acc_ctrl:<0>, || current MD stat : MD1 roam <0>, ||Call stat : IR92<0>, IR94<0>, SMS over IP<0> , sim<1>
+12-28 13:04:32.306   375   702 I MAL-RDS :  (          rds_ru_rpl_gen, 7780) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(1,255) New:(254,254)/(1,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(1,255) New:(254,254)/(1,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(1,255) New:(254,254)/(1,255) , sim<0>
+12-28 13:04:32.306   375   708 I MAL-RDS :  (          rds_ru_rpl_gen, 7780) [RDS-I][RU][RDS IMS/MMS][rds_ru_rpl_gen][OP-0] Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS WIFI]Ori:(254,254)/(255,255) New:(254,254)/(255,255)||[RU][RDS IMS/MMS CELL]Ori:(254,254)/(255,255) New:(254,254)/(255,255) , sim<1>
+12-28 13:04:32.306   375   694 I MAL-RDS :  (         rum_get_netstat, 1045) [RDS-I][RUM][rum_get_netstat] netstat <thrghpt, pkterrt>, wifi <2902, 0%>, mobile <126265050, 0%>
+12-28 13:04:32.306   375   694 I MAL-RDS :  (   rum_send_event_entity,   83) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 906
+12-28 13:04:32.306   375   694 I MAL-RDS :  (   rum_send_event_entity,   83) [RDS-I][RDS][RUM][rum_send_event_entity] send event 9706 to 907
+12-28 13:04:32.306   375   702 I MAL-RDS :  (    ru_send_event_entity,  433) [RDS-I][RDS][RU][ru_send_event_entity] send event 9016 to 1035 with ret(0)
+12-28 13:04:32.307   375   708 I MAL-RDS :  (    ru_send_event_entity,  433) [RDS-I][RDS][RU][ru_send_event_entity] send event 9016 to 1035 with ret(0)
+12-28 13:04:32.307  1781  1828 I MFI-Conn:  (     mfia_task_bootstrap,  911) mfia_task_bootstrap(): an event EVENT_MFI_RU_WIFI_NET_STAT_IND(9016) incoming from FD 52!!
+12-28 13:04:32.307  1781  1828 I MFI-Conn:  (     mfia_task_bootstrap,  911) mfia_task_bootstrap(): an event EVENT_MFI_RU_WIFI_NET_STAT_IND(9016) incoming from FD 52!!
+12-28 13:04:32.307  1781  1825 I MFI-RDS :  (             rds_urc_hdl,  564) [RDS][rds_urc_hdl] RCV Event: 9016 
+12-28 13:04:32.307  1781  1825 I MFI-RDS :  (             rds_urc_hdl,  564) [RDS][rds_urc_hdl] RCV Event: 9016 
+12-28 13:04:32.335  1062  1311 I PerfService: PerfServiceNative_boostEnableAsync:6
+12-28 13:04:32.337  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:32.337  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:32.405  1062  1311 I PerfService: PerfServiceNative_boostEnableTimeoutMsAsync:6, 100
+12-28 13:04:32.424   408  9153 W AudioFlinger: createEffect() error -2 from EffectGetDescriptor
+12-28 13:04:32.425   408  9153 E AudioEffect: set(): AudioFlinger could not create effect, status: -2
+12-28 13:04:32.425   408  1356 W AudioFlinger: createEffect() error -2 from EffectGetDescriptor
+12-28 13:04:32.425   408  1356 E AudioEffect: set(): AudioFlinger could not create effect, status: -2
+12-28 13:04:32.426   408 20235 I APM_AudioPolicyManager: startOutput() output 13, stream 1, session 41
+12-28 13:04:32.426   408 20235 I APM_AudioPolicyManager: getNewOutputDevice() selected device 2 bShareHwModule 1
+12-28 13:04:32.426   408 20235 I APM_AudioPolicyManager: setOutputDevice() changing device: 0x0002 ==> 0x0002, delayMs = 0
+12-28 13:04:32.426  1062  1795 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=com.android.todolist/.MainActivity bnds=[24,1248][282,1536]} from uid 10015 on display 0
+12-28 13:04:32.428   408   769 W AudioALSAStreamManager: -routingOutputDevice(), output_devices == current_output_devices(0x2), return
+12-28 13:04:32.429  1062  1062 I AudioPortEventHandler: [GJ_CB] handleMessage: msg.what = 2
+12-28 13:04:32.443  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:32.443  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:32.451   374   374 I BufferQueue: [unnamed-374-7137](this:0x7305ff8000,id:7137,api:0,p:-1,c:-1) BufferQueue core=(374:/system/bin/surfaceflinger)
+12-28 13:04:32.451   374   374 I BufferQueueProducer: [](this:0x7305ff8000,id:7137,api:0,p:-1,c:374) setMaxDequeuedBufferCount: maxDequeuedBuffers = 3
+12-28 13:04:32.477  2254 11499 I Launcher.MD5: createMD5, pathFile is /data/app/com.android.todolist-1/base.apk
+12-28 13:04:32.485  1923  1923 I perfservd: 0: set freq: -1 -1 2000000 -1 2600000 -1
+12-28 13:04:32.485   406   406 W Zygote  : Unable to set zygote scheduler boost
+12-28 13:04:32.485   406   406 I Zygote  : ForkAndSpecializeCommon: Begin to fork a new process
+12-28 13:04:32.485  1923  1923 I perfservd: 0: set: -1 -1 2 -1 2 -1
+12-28 13:04:32.491   406   406 I Zygote  : ForkAndSpecializeCommon: fork is finished, pid=11500 
+12-28 13:04:32.491   406   406 W Zygote  : Unable to set zygote scheduler boost
+12-28 13:04:32.491 11500 11500 I Zygote  : ForkAndSpecializeCommon: fork is finished, pid=0 
+12-28 13:04:32.492 11500 11500 W Zygote  : mz_is_rooted true
+12-28 13:04:32.492 11500 11500 I Zygote  : ForkAndSpecializeCommon: Beginning of SetGids
+12-28 13:04:32.493 11500 11500 I Zygote  : ForkAndSpecializeCommon: End of SetGids
